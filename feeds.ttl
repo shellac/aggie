@@ -1,0 +1,175 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+<http://twitter.com/statuses/user_timeline/49297481.rss>
+  dc:type "application/rss+xml" ;
+  dc:title "BBC Bristol (@BBCBristol) on Twitter" .
+#<http://twitter.com/favorites/49297481.rss>
+#  dc:type "application/rss+xml" ;
+#  dc:title "BBC Bristol (@BBCBristol) on Twitter" .
+<http://www.bbc.co.uk/blogs/adamandjoe/atom.xml>
+  dc:type "application/atom+xml" ;
+  dc:title "BBC - Adam and Joe" .
+#<http://www.bbc.co.uk/blogs/adamandjoe/rss.xml>
+#  dc:type "application/rss+xml" ;
+#  dc:title "BBC - Adam and Joe" .
+<http://twitter.com/statuses/user_timeline/143005824.rss>
+  dc:type "application/rss+xml" ;
+  dc:title "Adam's Big Mix Tape (@AdamsBigMixTape) on Twitter" .
+#<http://twitter.com/favorites/143005824.rss>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Adam's Big Mix Tape (@AdamsBigMixTape) on Twitter" .
+<http://seaborne.blogspot.com/feeds/posts/default>
+  dc:type "application/atom+xml" ;
+  dc:title "ARQtick" .
+#<http://seaborne.blogspot.com/feeds/posts/default?alt=rss>
+#  dc:type "application/rss+xml" ;
+#  dc:title "ARQtick" .
+<http://askbristoldebates.com/feed/>
+  dc:type "application/rss+xml" ;
+  dc:title "ASK Bristol | Join the debate!" .
+#<http://askbristoldebates.com/comments/feed/>
+#  dc:type "application/rss+xml" ;
+#  dc:title "ASK Bristol | Join the debate!" .
+<http://twitter.com/statuses/user_timeline/46201219.rss>
+  dc:type "application/rss+xml" ;
+  dc:title "Dave Harvey (@BBCBusinessDave) on Twitter" .
+#<http://twitter.com/favorites/46201219.rss>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Dave Harvey (@BBCBusinessDave) on Twitter" .
+#<http://www.badscience.net/feed/>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Bad Science" .
+#<http://www.badscience.net/feed/rss/>
+#  dc:type "text/xml" ;
+#  dc:title "Bad Science" .
+<http://www.badscience.net/feed/atom/>
+  dc:type "application/atom+xml" ;
+  dc:title "Bad Science" .
+<http://bristle.wordpress.com/feed/>
+  dc:type "application/rss+xml" ;
+  dc:title "Bristle's Blog from the BunKRS | Culture, current affairs, babber chatter and local gossip from the heart of Saint George, Bristol." .
+#<http://bristle.wordpress.com/comments/feed/>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Bristle's Blog from the BunKRS | Culture, current affairs, babber chatter and local gossip from the heart of Saint George, Bristol." .
+#<http://bristolgraffiti.wordpress.com/feed/>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Bristol graffiti | A blog following graf in Bristol and beyond" .
+#<http://bristolgraffiti.wordpress.com/comments/feed/>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Bristol graffiti | A blog following graf in Bristol and beyond" .
+<http://bristolgraffiti.blogspot.com/feeds/posts/default>
+  dc:type "application/atom+xml" ;
+  dc:title "Bristol streetart" .
+#<http://bristolgraffiti.blogspot.com/feeds/posts/default?alt=rss>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Bristol streetart" .
+<http://www.bristolwireless.net/feed/>
+  dc:type "application/rss+xml" ;
+  dc:title "Bristol Wireless | Bristol Wireless – community IT services, help & training in your aerial. Registered with the FSA. Reg. no.: 29638R | Providing IT advice & services since 2002." .
+#<http://www.bristolwireless.net/comments/feed/>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Bristol Wireless | Bristol Wireless – community IT services, help & training in your aerial. Registered with the FSA. Reg. no.: 29638R | Providing IT advice & services since 2002." .
+<http://cafekaput.blogspot.com/feeds/posts/default>
+  dc:type "application/atom+xml" ;
+  dc:title "Café Kaput" .
+#<http://cafekaput.blogspot.com/feeds/posts/default?alt=rss>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Café Kaput" .
+<http://blog.headius.com/feeds/posts/default>
+  dc:type "application/atom+xml" ;
+  dc:title "Headius" .
+#<http://blog.headius.com/feeds/posts/default?alt=rss>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Headius" .
+#<http://bristol.indymedia.org/2.0/rss/features>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Features - Bristol Indymedia" .
+#<http://bristol.indymedia.org/2.0/rss/newswire>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Features - Bristol Indymedia" .
+<http://bristol.indymedia.org/atom.xml>
+  dc:type "application/atom+xml" ;
+  dc:title "Features - Bristol Indymedia" .
+#<http://bristol.indymedia.org/podcast.xml>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Features - Bristol Indymedia" .
+<http://blog.jclark.com/feeds/posts/default>
+  dc:type "application/atom+xml" ;
+  dc:title "James Clark's Random Thoughts" .
+#<http://blog.jclark.com/feeds/posts/default?alt=rss>
+#  dc:type "application/rss+xml" ;
+#  dc:title "James Clark's Random Thoughts" .
+<http://jameswilkes.wordpress.com/feed/>
+  dc:type "application/rss+xml" ;
+  dc:title "Jameswilkes's Blog" .
+#<http://jameswilkes.wordpress.com/comments/feed/>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Jameswilkes's Blog" .
+<http://mapperz.blogspot.com/feeds/posts/default>
+  dc:type "application/atom+xml" ;
+  dc:title "Mapping News by Mapperz" .
+#<http://mapperz.blogspot.com/feeds/posts/default?alt=rss>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Mapping News by Mapperz" .
+<http://twitter.com/statuses/user_timeline/11414482.rss>
+  dc:type "application/rss+xml" ;
+  dc:title "Mike Jones (@MrJ1971) on Twitter" .
+#<http://twitter.com/favorites/11414482.rss>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Mike Jones (@MrJ1971) on Twitter" .
+<http://feeds.feedburner.com/Opengeodata>
+  dc:type "application/rss+xml" ;
+  dc:title "OpenGeoData - Home" .
+<http://stokescroft.wordpress.com/feed/>
+  dc:type "application/rss+xml" ;
+  dc:title "Peoples Republic of Stokes Croft" .
+#<http://stokescroft.wordpress.com/comments/feed/>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Peoples Republic of Stokes Croft" .
+<http://planet.gnome.org/atom.xml>
+  dc:type "application/atom+xml" ;
+  dc:title "Planet GNOME" .
+#<http://planet.gnome.org/rss20.xml>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Planet GNOME" .
+<https://my-profile.eu/index.rdf>
+  dc:type "application/rss+xml" ;
+  dc:title "Planet RDF" .
+<http://twitter.com/statuses/user_timeline/50640872.rss>
+  dc:type "application/rss+xml" ;
+  dc:title "Redland People (@redlandpeople) on Twitter" .
+#<http://twitter.com/favorites/50640872.rss>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Redland People (@redlandpeople) on Twitter" .
+<http://feeds.feedburner.com/datagraph>
+  dc:type "application/rss+xml" ;
+  dc:title "The Datagraph Blog" .
+<http://twitter.com/statuses/user_timeline/61459919.rss>
+  dc:type "application/rss+xml" ;
+  dc:title "Bristol Skeptics (@bristolskeptics) on Twitter" .
+#<http://twitter.com/favorites/61459919.rss>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Bristol Skeptics (@bristolskeptics) on Twitter" .
+<http://twitter.com/statuses/user_timeline/467300991.rss>
+  dc:type "application/rss+xml" ;
+  dc:title "Bristol Web Folk (@bristolwebfolk) on Twitter" .
+#<http://twitter.com/favorites/467300991.rss>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Bristol Web Folk (@bristolwebfolk) on Twitter" .
+<http://twitter.com/statuses/user_timeline/21294997.rss>
+  dc:type "application/rss+xml" ;
+  dc:title "Jon Rogers (@CllrJonRogers) on Twitter" .
+#<http://twitter.com/favorites/21294997.rss>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Jon Rogers (@CllrJonRogers) on Twitter" .
+<http://twitter.com/statuses/user_timeline/1246421.rss>
+  dc:type "application/rss+xml" ;
+  dc:title "Dan Brickley (@danbri) on Twitter" .
+#<http://twitter.com/favorites/1246421.rss>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Dan Brickley (@danbri) on Twitter" .
+<http://twitter.com/statuses/user_timeline/7169162.rss>
+  dc:type "application/rss+xml" ;
+  dc:title "Libby Miller (@libbymiller) on Twitter" .
+#<http://twitter.com/favorites/7169162.rss>
+#  dc:type "application/rss+xml" ;
+#  dc:title "Libby Miller (@libbymiller) on Twitter" .

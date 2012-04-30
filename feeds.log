@@ -1,0 +1,161 @@
+Fetch <http://twitter.com/BBCBristol>
+"BBC Bristol (@BBCBristol) on Twitter"
+    <http://twitter.com/statuses/user_timeline/49297481.rss> (application/rss+xml)
+    <http://twitter.com/favorites/49297481.rss> (application/rss+xml)
+Fetch <http://www.semanticoverflow.com/feeds/tag/jena>
+    http://www.semanticoverflow.com/feeds/tag/jena went bang
+Fetch <http://33bits.org>
+    http://33bits.org went bang
+Fetch <http://www.bbc.co.uk/blogs/adamandjoe/>
+"BBC - Adam and Joe"
+    <http://www.bbc.co.uk/blogs/adamandjoe/atom.xml> (application/atom+xml)
+    <http://www.bbc.co.uk/blogs/adamandjoe/rss.xml> (application/rss+xml)
+Fetch <http://twitter.com/AdamsBigMixTape>
+"Adam's Big Mix Tape (@AdamsBigMixTape) on Twitter"
+    <http://twitter.com/statuses/user_timeline/143005824.rss> (application/rss+xml)
+    <http://twitter.com/favorites/143005824.rss> (application/rss+xml)
+Fetch <http://seaborne.blogspot.com/>
+"ARQtick"
+    <http://seaborne.blogspot.com/feeds/posts/default> (application/atom+xml)
+    <http://seaborne.blogspot.com/feeds/posts/default?alt=rss> (application/rss+xml)
+Fetch <http://askbristol.wordpress.com>
+"ASK Bristol | Join the debate!"
+    <http://askbristoldebates.com/feed/> (application/rss+xml)
+    <http://askbristoldebates.com/comments/feed/> (application/rss+xml)
+Fetch <http://twitter.com/bbcbusinessdave>
+"Dave Harvey (@BBCBusinessDave) on Twitter"
+    <http://twitter.com/statuses/user_timeline/46201219.rss> (application/rss+xml)
+    <http://twitter.com/favorites/46201219.rss> (application/rss+xml)
+Fetch <http://www.badscience.net>
+"Bad Science"
+    <http://www.badscience.net/feed/> (application/rss+xml)
+    <http://www.badscience.net/feed/rss/> (text/xml)
+    <http://www.badscience.net/feed/atom/> (application/atom+xml)
+Fetch <http://bristle.wordpress.com>
+"Bristle's Blog from the BunKRS | Culture, current affairs, babber chatter and local gossip from the heart of Saint George, Bristol."
+    <http://bristle.wordpress.com/feed/> (application/rss+xml)
+    <http://bristle.wordpress.com/comments/feed/> (application/rss+xml)
+Fetch <http://bristolgraffiti.wordpress.com>
+"Bristol graffiti | A blog following graf in Bristol and beyond"
+    <http://bristolgraffiti.wordpress.com/feed/> (application/rss+xml)
+    <http://bristolgraffiti.wordpress.com/comments/feed/> (application/rss+xml)
+Fetch <http://bristolgraffiti.blogspot.com/>
+"Bristol streetart"
+    <http://bristolgraffiti.blogspot.com/feeds/posts/default> (application/atom+xml)
+    <http://bristolgraffiti.blogspot.com/feeds/posts/default?alt=rss> (application/rss+xml)
+Fetch <http://bristolcars.blogspot.com/>
+    http://bristolcars.blogspot.com/ went bang
+Fetch <http://www.bristolwireless.net/news>
+"Bristol Wireless | Bristol Wireless \342\200\223 community IT services, help & training in your aerial. Registered with the FSA. Reg. no.: 29638R | Providing IT advice & services since 2002."
+    <http://www.bristolwireless.net/feed/> (application/rss+xml)
+    <http://www.bristolwireless.net/comments/feed/> (application/rss+xml)
+Fetch <http://cafekaput.blogspot.com/>
+"Caf\303\251 Kaput"
+    <http://cafekaput.blogspot.com/feeds/posts/default> (application/atom+xml)
+    <http://cafekaput.blogspot.com/feeds/posts/default?alt=rss> (application/rss+xml)
+Fetch <http://twitter.com/Directgov_i>
+    http://twitter.com/Directgov_i went bang
+Fetch <http://www.epimorphics.com/web/blog>
+"Blogs | Epimorphics"
+    http://www.epimorphics.com/web/blog went bang
+Fetch <http://greenbristolblog.blogspot.com/>
+    http://greenbristolblog.blogspot.com/ went bang
+Fetch <http://blog.headius.com/>
+"Headius"
+    <http://blog.headius.com/feeds/posts/default> (application/atom+xml)
+    <http://blog.headius.com/feeds/posts/default?alt=rss> (application/rss+xml)
+Fetch <http://bristol.indymedia.org>
+"Features - Bristol Indymedia"
+    <http://bristol.indymedia.org/2.0/rss/features> (application/rss+xml)
+    <http://bristol.indymedia.org/2.0/rss/newswire> (application/rss+xml)
+    <http://bristol.indymedia.org/atom.xml> (application/atom+xml)
+    <http://bristol.indymedia.org/podcast.xml> (application/rss+xml)
+Fetch <http://blog.jclark.com/>
+"James Clark's Random Thoughts"
+    <http://blog.jclark.com/feeds/posts/default> (application/atom+xml)
+    <http://blog.jclark.com/feeds/posts/default?alt=rss> (application/rss+xml)
+Fetch <http://jameswilkes.wordpress.com>
+"Jameswilkes's Blog"
+    <http://jameswilkes.wordpress.com/feed/> (application/rss+xml)
+    <http://jameswilkes.wordpress.com/comments/feed/> (application/rss+xml)
+Fetch <http://mapperz.blogspot.com/>
+"Mapping News by Mapperz"
+    <http://mapperz.blogspot.com/feeds/posts/default> (application/atom+xml)
+    <http://mapperz.blogspot.com/feeds/posts/default?alt=rss> (application/rss+xml)
+Fetch <http://twitter.com/MrJ1971>
+"Mike Jones (@MrJ1971) on Twitter"
+    <http://twitter.com/statuses/user_timeline/11414482.rss> (application/rss+xml)
+    <http://twitter.com/favorites/11414482.rss> (application/rss+xml)
+Fetch <http://montpelier.ning.com/forum/topic/list?feed=yes&xn_auth=no>
+    http://montpelier.ning.com/forum/topic/list?feed=yes&xn_auth=no went bang
+Fetch <http://www.opengeodata.org>
+"OpenGeoData - Home"
+    <http://feeds.feedburner.com/Opengeodata> (application/rss+xml)
+Fetch <http://stokescroft.wordpress.com>
+"Peoples Republic of Stokes Croft"
+    <http://stokescroft.wordpress.com/feed/> (application/rss+xml)
+    <http://stokescroft.wordpress.com/comments/feed/> (application/rss+xml)
+Fetch <http://planet.classpath.org/>
+    http://planet.classpath.org/ went bang
+Fetch <http://planet.gnome.org/>
+"Planet GNOME"
+    <http://planet.gnome.org/atom.xml> (application/atom+xml)
+    <http://planet.gnome.org/rss20.xml> (application/rss+xml)
+Fetch <http://blogs.sun.com/openjdk/feed/entries/atom>
+"OpenJDK NewsNews (2011-02-24)News (2010-11-12)News (2010-11-01)News (2010-10-15)News (2010-10-11)News (2010-09-10)News (2010-08-27)News (2010-08-20)News (2010-07-19)News (2010-07-06)News (2010-06-21)News (2010-06-11)OpenJDK Roundup"
+    <https://blogs.oracle.com/openjdk/> (text/html)
+    <https://blogs.oracle.com/openjdk/entry/news_2011_02_24> (text/html)
+    <https://blogs.oracle.com/openjdk/entry/news_2010_11_12> (text/html)
+    <https://blogs.oracle.com/openjdk/entry/news_2010_11_01> (text/html)
+    <https://blogs.oracle.com/openjdk/entry/news_2010_10_15> (text/html)
+    <https://blogs.oracle.com/openjdk/entry/news_2010_10_11> (text/html)
+    <https://blogs.oracle.com/openjdk/entry/news_2010_09_10> (text/html)
+    <https://blogs.oracle.com/openjdk/entry/news_2010_08_27> (text/html)
+    <https://blogs.oracle.com/openjdk/entry/news_2010_08_20> (text/html)
+    <https://blogs.oracle.com/openjdk/entry/news_2010_07_19> (text/html)
+    <https://blogs.oracle.com/openjdk/entry/news_2010_07_06> (text/html)
+    <https://blogs.oracle.com/openjdk/entry/news_2010_06_21> (text/html)
+    <https://blogs.oracle.com/openjdk/entry/openjdk_roundup1> (text/html)
+    <https://blogs.oracle.com/openjdk/entry/openjdk_roundup> (text/html)
+Fetch <http://planetrdf.com/>
+"Planet RDF"
+    <https://my-profile.eu/index.rdf> (application/rss+xml)
+Fetch <http://planet.xmlhack.com/>
+    http://planet.xmlhack.com/ went bang
+Fetch <http://www.opsi.gov.uk/unlocking-service/>
+"data.gov.uk | Opening up government"
+Fetch <http://twitter.com/redlandpeople>
+"Redland People (@redlandpeople) on Twitter"
+    <http://twitter.com/statuses/user_timeline/50640872.rss> (application/rss+xml)
+    <http://twitter.com/favorites/50640872.rss> (application/rss+xml)
+Fetch <http://www.semanticoverflow.com/feeds>
+    http://www.semanticoverflow.com/feeds went bang
+Fetch <http://www.thewebsemantic.com>
+    http://www.thewebsemantic.com went bang
+Fetch <http://jimjupp.blogspot.com/>
+    http://jimjupp.blogspot.com/ went bang
+Fetch <http://thebristolblogger.wordpress.com>
+"Protected Blog \342\200\272 Login"
+Fetch <http://blog.datagraph.org/>
+"The Datagraph Blog"
+    <http://feeds.feedburner.com/datagraph> (application/rss+xml)
+Fetch <http://twitter.com/bristolskeptics>
+"Bristol Skeptics (@bristolskeptics) on Twitter"
+    <http://twitter.com/statuses/user_timeline/61459919.rss> (application/rss+xml)
+    <http://twitter.com/favorites/61459919.rss> (application/rss+xml)
+Fetch <http://twitter.com/bristolwebfolk>
+"Bristol Web Folk (@bristolwebfolk) on Twitter"
+    <http://twitter.com/statuses/user_timeline/467300991.rss> (application/rss+xml)
+    <http://twitter.com/favorites/467300991.rss> (application/rss+xml)
+Fetch <http://twitter.com/CllrJonRogers>
+"Jon Rogers (@CllrJonRogers) on Twitter"
+    <http://twitter.com/statuses/user_timeline/21294997.rss> (application/rss+xml)
+    <http://twitter.com/favorites/21294997.rss> (application/rss+xml)
+Fetch <http://twitter.com/danbri>
+"Dan Brickley (@danbri) on Twitter"
+    <http://twitter.com/statuses/user_timeline/1246421.rss> (application/rss+xml)
+    <http://twitter.com/favorites/1246421.rss> (application/rss+xml)
+Fetch <http://twitter.com/libbymiller>
+"Libby Miller (@libbymiller) on Twitter"
+    <http://twitter.com/statuses/user_timeline/7169162.rss> (application/rss+xml)
+    <http://twitter.com/favorites/7169162.rss> (application/rss+xml)

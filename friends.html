@@ -1,0 +1,423 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>friendbinder - list friends</title>
+  <link rel='apple-touch-icon' media='screen and (resolution: 163dpi)' href='/images/logo-square-57.png' />
+<link rel='apple-touch-icon' media='screen and (resolution: 132dpi)' href='/images/logo-square-72.png' />
+<link rel='apple-touch-icon' media='screen and (resolution: 326dpi)' href='/images/logo-square-114.png' />
+<link type='text/css' rel='stylesheet' href='/min/?g=css&1242' />
+<!--[if lte IE 6]><link rel='stylesheet' type='text/css' href='/stylesheets/hacks_lte_ie6.css?2010_06_23c' /><![endif]-->
+<!--[if lt IE 6]><link rel='stylesheet' type='text/css' href='/stylesheets/hacks_lte_ie55.css?2008_02_27' /><![endif]-->
+<!--[if IE 7]><link rel='stylesheet' type='text/css' href='/stylesheets/hacks_ie7.css?2008_02_27' /><![endif]-->
+<!--[if lte IE 7]><link rel='stylesheet' type='text/css' href='/stylesheets/hacks_lte_ie7.css?2008_02_27' /><![endif]-->
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.friendbinder.com/opensearch_friends.xml?2008_03_06a" title="friendbinder friends" />
+<link rel="icon" href="/images/logo-sm-sq32.png" sizes="32x32" />
+<link rel='shortcut icon' type='image/png' href='/images/logo-sm-sq16.png' sizes="16x16" />
+<script type='text/javascript'> 
+csrf_key='3acca0c945bcba910d663475aca20b6b';
+jobs_update_period=359;
+check_for_updates_query='since=2012-04-05+22%3A01%3A38&current_num=0';
+setTimeout('submit_jobs()',183000);my_uf_id=1432577;
+use_geo=false;
+</script>
+<script src='/min/?g=js&1258' type='text/javascript'></script>
+<script type="text/javascript">var $j=jQuery;$j(document).ready(function(){ $j("a[rel^='lightbox']").prettyPhoto(); });</script></head>
+
+<body onload="if (document.getElementById('findbox')) document.getElementById('findbox').focus();">
+  <div class="body_div">
+	<div style='position:absolute;height:35px;width:100%;top:0;z-index:-1;background:#CD3333 url(/images/top_back2.png) repeat-x'>&nbsp;</div><div class='top'>
+<a href='/'><img src='/images/sitelogo-sm.gif' width='155' height='25' border='0' alt='friendbinder.com' style='margin-left:25px;margin-right:10px;margin-top:5px;float:left;' /></a><a href='/index.php' class='nu'><div class='menuitem'>stream</div></a><a href='/list_friends.php' class='nu'><div class='menuitem_sel'>friends</div></a><a href='/view_stream.php?uf_id=1432577' class='nu'><div class='menuitem'>you</div></a><a href='/networks.php' class='nu'><div class='menuitem'>networks</div></a><a href='/settings.php' class='nu'><div class='menuitem'>settings</div></a><a href='/search.php' class='nu'><div class='menuitem'>search</div></a><div class='quicksearchhack'>
+	    <div id='quickfresults' class='el_hidden' style='position: absolute; z-index: 99;' >&nbsp;</div>
+		    <form action='list_friends.php' style='margin: 0px; padding: 0px;' onsubmit='return quick_find_submit(event);'>
+			    <input type='text' id='quickf' name='s' autocomplete='off' value='Search' class='quick_input' maxlength='500' onkeydown='fl_do()' onkeyup='quick_find_key(this,event);' onclick='fl_do();if (this.value == "Search") this.value = "";' />
+						    </form>
+							</div><span class='logoutetc'><a href='/your_profile.php'>shellac</a> | <a href='/login.php?c=logout'>logout</a></span></div>
+
+	<div class='side_stuff'>
+			</div>
+
+	<div class='main_top'>
+	<div class='main_ctl'></div><div class='main_ctr'></div>	<form><input type='hidden' name='uf_id' id='uf_id' /></form><h1>Friends</h1>
+<form action='list_friends.php' method='get' style='margin: 0px;' ><input type='hidden' id='interest_level' value=''/> Find Friend: <input type='text' class='frm_tarea_sm' name='s' id='findbox' value='' maxlength='50' style='width: 100px' />&nbsp;&nbsp;|&nbsp;&nbsp;<a href='#' onclick='toggle_tag_filter();'>Filter By Tag</a><div id='tag_filter' class='el_hidden' style='position: absolute; z-index: 99; margin-left: 5%; width: 300px; border: 1px solid #666; background-color: #fff; padding:2px;' ><div title='close' class='x' onclick='toggle_tag_filter();' style='right:-5px;top:-5px;'>X</div><div style='padding:5px;padding-top:0;clear:right'>You have no tags setup. To add a tag, click on a friend's picture and use the menu to create one<div style='text-align: right; width: 290px; float: left;'><input type='button' class='frm_btn' value='Hide' onclick='toggle_tag_filter();' /></div><div style='clear:left'></div></div></div><br/><br /><div class='tab_spacer'>&nbsp;</div><div class='tab_sel' id='tab_all'><a href='list_friends.php'>All</a></div><div class='tab_spacer'>&nbsp;</div><div class='tab' id='tab_interest_level_5'><a href='list_friends.php?interest_level=5'>Interest Level 5</a></div><div class='tab_spacer'>&nbsp;</div><div class='tab' id='tab_interest_level_4'><a href='list_friends.php?interest_level=4'>&nbsp;4&nbsp;</a></div><div class='tab_spacer'>&nbsp;</div><div class='tab' id='tab_interest_level_3'><a href='list_friends.php?interest_level=3'>&nbsp;3&nbsp;</a></div><div class='tab_spacer'>&nbsp;</div><div class='tab' id='tab_interest_level_2'><a href='list_friends.php?interest_level=2'>&nbsp;2&nbsp;</a></div><div class='tab_spacer'>&nbsp;</div><div class='tab' id='tab_interest_level_1'><a href='list_friends.php?interest_level=1'>&nbsp;1&nbsp;</a></div><div class='tab_spacer'>&nbsp;</div><div class='tab' id='tab_recent'><a href='list_friends.php?f=recent'>Recent</a></div><div class='tab_spacer'>&nbsp;</div><div class='tab' id='tab_untagged'><a href='list_friends.php?f=untagged'>Untagged</a></div><div class='tab_end'>&nbsp;</div><div style='clear:left'></div></form></div><div class='main_bottom'><div class='main_cbl'></div><div class='main_cbr'></div><br /><div style='margin-bottom: 10px;' class='sort_container'>	<div class='sort_box' style='font-weight: bold;' onclick='location.href="list_friends.php?p=1&amp;sort=known_as_asc"' ><img src='images/sort_left.png' border='0' height='22' align='absmiddle' />&nbsp;Name&nbsp;<img src='images/sort_right.png' border='0' height='22' align='absmiddle' /></div>	<div class='sort_box' style='' onclick='location.href="list_friends.php?p=1&amp;sort=interest_level_desc"' ><img src='images/sort_left.png' border='0' height='22' align='absmiddle' />&nbsp;Interest Level&nbsp;<img src='images/sort_right.png' border='0' height='22' align='absmiddle' /></div>	<div class='sort_box' style='' onclick='location.href="list_friends.php?p=1&amp;sort=max_date_created_desc"' ><img src='images/sort_left.png' border='0' height='22' align='absmiddle' />&nbsp;Last Active&nbsp;<img src='images/sort_right.png' border='0' height='22' align='absmiddle' /></div></div><div style='clear: both' />&nbsp;</div><table style='width: 100%;' class='ct' cellpadding='2' cellspacing='0'>
+<tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1788833,0)")' style='color: #888;'><img src='/images/blank-icons/5.png' border='0' /></a>
+<span id='cmg0'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Ftwitter.com%2FBBCBristol' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1788833&amp;c=networks'> BBCBristol </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1788833-stars' onclick='stars_set("1788833-stars")' onmouseout='stars_mouseout("1788833-stars")' stars_set_value='2' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1788833-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1788833-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1788833-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1788833-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1788833-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 25 days ago</i></div></td></tr></table></td></tr><tr class='ct_even'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1449240,1)")' style='color: #888;'><img src='/images/blank-icons/0.png' border='0' /></a>
+<span id='cmg1'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fwww.semanticoverflow.com%2Ffeeds%2Ftag%2Fjena' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1449240&amp;c=networks'>[Stack]Overflow </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1449240-stars' onclick='stars_set("1449240-stars")' onmouseout='stars_mouseout("1449240-stars")' stars_set_value='2' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1449240-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1449240-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1449240-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1449240-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1449240-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active </i></div></td></tr></table></td></tr><tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1432672,2)")' style='color: #888;'><img src='http://www.gravatar.com/blavatar/5050e4a2c8d339f952f56725962dc7a0?s=96&amp;d=http://s.wordpress.com/i/buttonw-com.png' border='0' width='50' /></a>
+<span id='cmg2'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2F33bits.org' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1432672&amp;c=networks'>33 Bits of Entropy </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1432672-stars' onclick='stars_set("1432672-stars")' onmouseout='stars_mouseout("1432672-stars")' stars_set_value='4' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432672-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432672-stars",2)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432672-stars",3)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432672-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432672-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 69 days ago</i></div></td></tr></table></td></tr><tr class='ct_even'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1499848,3)")' style='color: #888;'><img src='/images/blank-icons/4.png' border='0' /></a>
+<span id='cmg3'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fwww.bbc.co.uk%2Fblogs%2Fadamandjoe%2F' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1499848&amp;c=networks'>Adam and Joe </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1499848-stars' onclick='stars_set("1499848-stars")' onmouseout='stars_mouseout("1499848-stars")' stars_set_value='3' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1499848-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1499848-stars",2)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1499848-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1499848-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1499848-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active </i></div></td></tr></table></td></tr><tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1842967,4)")' style='color: #888;'><img src='/images/blank-icons/7.png' border='0' /></a>
+<span id='cmg4'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Ftwitter.com%2FAdamsBigMixTape' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1842967&amp;c=networks'>Adam Buxton </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1842967-stars' onclick='stars_set("1842967-stars")' onmouseout='stars_mouseout("1842967-stars")' stars_set_value='3' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1842967-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1842967-stars",2)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1842967-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1842967-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1842967-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active </i></div></td></tr></table></td></tr><tr class='ct_even'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1655239,5)")' style='color: #888;'><img src='/images/blank-icons/7.png' border='0' /></a>
+<span id='cmg5'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fseaborne.blogspot.com%2F' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1655239&amp;c=networks'>Andy </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1655239-stars' onclick='stars_set("1655239-stars")' onmouseout='stars_mouseout("1655239-stars")' stars_set_value='3' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1655239-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1655239-stars",2)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1655239-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1655239-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1655239-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active </i></div></td></tr></table></td></tr><tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1432783,6)")' style='color: #888;'><img src='http://www.gravatar.com/blavatar/c4fb880fe4195e3fd57d379a3db5c90c?s=96&amp;d=http://s.wordpress.com/i/buttonw-com.png' border='0' width='50' /></a>
+<span id='cmg6'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Faskbristol.wordpress.com' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1432783&amp;c=networks'>Ask Bristol </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1432783-stars' onclick='stars_set("1432783-stars")' onmouseout='stars_mouseout("1432783-stars")' stars_set_value='3' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432783-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432783-stars",2)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432783-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432783-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432783-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 28 days ago</i></div></td></tr></table></td></tr><tr class='ct_even'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1811835,7)")' style='color: #888;'><img src='/images/blank-icons/3.png' border='0' /></a>
+<span id='cmg7'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Ftwitter.com%2Fbbcbusinessdave' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1811835&amp;c=networks'>bbcbusinessdave </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1811835-stars' onclick='stars_set("1811835-stars")' onmouseout='stars_mouseout("1811835-stars")' stars_set_value='1' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1811835-stars",1)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1811835-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1811835-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1811835-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1811835-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 31 days ago</i></div></td></tr></table></td></tr><tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1517043,8)")' style='color: #888;'><img src='/images/blank-icons/3.png' border='0' /></a>
+<span id='cmg8'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fwww.badscience.net' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1517043&amp;c=networks'>Ben Goldacre </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1517043-stars' onclick='stars_set("1517043-stars")' onmouseout='stars_mouseout("1517043-stars")' stars_set_value='3' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1517043-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1517043-stars",2)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1517043-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1517043-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1517043-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 56 days ago</i></div></td></tr></table></td></tr><tr class='ct_even'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1467976,9)")' style='color: #888;'><img src='http://www.gravatar.com/blavatar/1f42bf859ea4c880c26ecb98337363ca?s=96&amp;d=http://s.wordpress.com/i/buttonw-com.png' border='0' width='50' /></a>
+<span id='cmg9'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fbristle.wordpress.com' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1467976&amp;c=networks'>Bristle&#039;s Blog from the BunKRS </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1467976-stars' onclick='stars_set("1467976-stars")' onmouseout='stars_mouseout("1467976-stars")' stars_set_value='2' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1467976-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1467976-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1467976-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1467976-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1467976-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 28 days ago</i></div></td></tr></table></td></tr><tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1432678,10)")' style='color: #888;'><img src='http://www.gravatar.com/blavatar/c26c8295c6f012d570bda45f692d51c0?s=96&amp;d=http://s.wordpress.com/i/buttonw-com.png' border='0' width='50' /></a>
+<span id='cmg10'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fbristolgraffiti.wordpress.com' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1432678&amp;c=networks'>Bristol graffiti </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1432678-stars' onclick='stars_set("1432678-stars")' onmouseout='stars_mouseout("1432678-stars")' stars_set_value='4' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432678-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432678-stars",2)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432678-stars",3)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432678-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432678-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active </i></div></td></tr></table></td></tr><tr class='ct_even'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1432677,11)")' style='color: #888;'><img src='/images/blank-icons/9.png' border='0' /></a>
+<span id='cmg11'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fbristolgraffiti.blogspot.com%2F' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1432677&amp;c=networks'>Bristol streetart </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1432677-stars' onclick='stars_set("1432677-stars")' onmouseout='stars_mouseout("1432677-stars")' stars_set_value='2' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432677-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432677-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432677-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432677-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432677-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 47 days ago</i></div></td></tr></table></td></tr><tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1432676,12)")' style='color: #888;'><img src='/images/blank-icons/8.png' border='0' /></a>
+<span id='cmg12'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fbristolcars.blogspot.com%2F' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1432676&amp;c=networks'>Bristol Traffic </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1432676-stars' onclick='stars_set("1432676-stars")' onmouseout='stars_mouseout("1432676-stars")' stars_set_value='3' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432676-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432676-stars",2)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432676-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432676-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432676-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 25 days ago</i></div></td></tr></table></td></tr><tr class='ct_even'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1467977,13)")' style='color: #888;'><img src='http://www.bristolwireless.net/news/wp-content/themes/bristolwireless/images/bw_logo_itunes_sm.jpg' border='0' width='50' /></a>
+<span id='cmg13'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fwww.bristolwireless.net%2Fnews' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1467977&amp;c=networks'>Bristol Wireless </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1467977-stars' onclick='stars_set("1467977-stars")' onmouseout='stars_mouseout("1467977-stars")' stars_set_value='2' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1467977-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1467977-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1467977-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1467977-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1467977-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 25 days ago</i></div></td></tr></table></td></tr><tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(2009828,14)")' style='color: #888;'><img src='/images/blank-icons/8.png' border='0' /></a>
+<span id='cmg14'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fcafekaput.blogspot.com%2F' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=2009828&amp;c=networks'>Café Kaput </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='2009828-stars' onclick='stars_set("2009828-stars")' onmouseout='stars_mouseout("2009828-stars")' stars_set_value='2' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("2009828-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("2009828-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("2009828-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("2009828-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("2009828-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 60 days ago</i></div></td></tr></table></td></tr><tr class='ct_even'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1432675,15)")' style='color: #888;'><img src='/images/blank-icons/7.png' border='0' /></a>
+<span id='cmg15'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Ftwitter.com%2FDirectgov_i' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1432675&amp;c=networks'>Directgov </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1432675-stars' onclick='stars_set("1432675-stars")' onmouseout='stars_mouseout("1432675-stars")' stars_set_value='2' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432675-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432675-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432675-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432675-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432675-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 90 days ago</i></div></td></tr></table></td></tr><tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1649280,16)")' style='color: #888;'><img src='/images/blank-icons/0.png' border='0' /></a>
+<span id='cmg16'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fwww.epimorphics.com%2Fweb%2Fblog' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1649280&amp;c=networks'>Epimorphics </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1649280-stars' onclick='stars_set("1649280-stars")' onmouseout='stars_mouseout("1649280-stars")' stars_set_value='3' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1649280-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1649280-stars",2)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1649280-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1649280-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1649280-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active </i></div></td></tr></table></td></tr><tr class='ct_even'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1432785,17)")' style='color: #888;'><img src='/images/blank-icons/9.png' border='0' /></a>
+<span id='cmg17'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fgreenbristolblog.blogspot.com%2F' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1432785&amp;c=networks'>Green Bristol Blog </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1432785-stars' onclick='stars_set("1432785-stars")' onmouseout='stars_mouseout("1432785-stars")' stars_set_value='2' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432785-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432785-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432785-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432785-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432785-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active </i></div></td></tr></table></td></tr><tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1432609,18)")' style='color: #888;'><img src='/images/blank-icons/1.png' border='0' /></a>
+<span id='cmg18'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fblog.headius.com%2F' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1432609&amp;c=networks'>Headius </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1432609-stars' onclick='stars_set("1432609-stars")' onmouseout='stars_mouseout("1432609-stars")' stars_set_value='3' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432609-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432609-stars",2)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432609-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432609-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432609-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active </i></div></td></tr></table></td></tr><tr class='ct_even'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1432679,19)")' style='color: #888;'><img src='http://bristol.indymedia.org/graphics/feedlogo.gif' border='0' width='50' /></a>
+<span id='cmg19'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fbristol.indymedia.org' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1432679&amp;c=networks'>Indymedia Bristol </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1432679-stars' onclick='stars_set("1432679-stars")' onmouseout='stars_mouseout("1432679-stars")' stars_set_value='1' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432679-stars",1)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432679-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432679-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432679-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432679-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 34 days ago</i></div></td></tr></table></td></tr><tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1495501,20)")' style='color: #888;'><img src='/images/blank-icons/1.png' border='0' /></a>
+<span id='cmg20'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fblog.jclark.com%2F' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1495501&amp;c=networks'>James Clark </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1495501-stars' onclick='stars_set("1495501-stars")' onmouseout='stars_mouseout("1495501-stars")' stars_set_value='2' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1495501-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1495501-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1495501-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1495501-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1495501-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active </i></div></td></tr></table></td></tr><tr class='ct_even'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1534190,21)")' style='color: #888;'><img src='http://www.gravatar.com/blavatar/165f7ff2137de0cec6c2254e292514ad?s=96&amp;d=http://s.wordpress.com/i/buttonw-com.png' border='0' width='50' /></a>
+<span id='cmg21'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fjameswilkes.wordpress.com' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1534190&amp;c=networks'>James Wilkes </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1534190-stars' onclick='stars_set("1534190-stars")' onmouseout='stars_mouseout("1534190-stars")' stars_set_value='3' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1534190-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1534190-stars",2)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1534190-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1534190-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1534190-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active </i></div></td></tr></table></td></tr><tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1878401,22)")' style='color: #888;'><img src='http://photos1.blogger.com/blogger/5522/3070/1600/antarctica_upsidedown.jpg' border='0' width='50' /></a>
+<span id='cmg22'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fmapperz.blogspot.com%2F' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1878401&amp;c=networks'>Mapperz - The Mapping News Blog </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1878401-stars' onclick='stars_set("1878401-stars")' onmouseout='stars_mouseout("1878401-stars")' stars_set_value='1' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1878401-stars",1)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1878401-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1878401-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1878401-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1878401-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 25 days ago</i></div></td></tr></table></td></tr><tr class='ct_even'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1655199,23)")' style='color: #888;'><img src='/images/blank-icons/3.png' border='0' /></a>
+<span id='cmg23'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Ftwitter.com%2FMrJ1971' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1655199&amp;c=networks'>Mike </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1655199-stars' onclick='stars_set("1655199-stars")' onmouseout='stars_mouseout("1655199-stars")' stars_set_value='3' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1655199-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1655199-stars",2)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1655199-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1655199-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1655199-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 24 days ago</i></div></td></tr></table></td></tr><tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1432784,24)")' style='color: #888;'><img src='/images/blank-icons/8.png' border='0' /></a>
+<span id='cmg24'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fmontpelier.ning.com%2Fforum%2Ftopic%2Flist%3Ffeed%3Dyes%26xn_auth%3Dno' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1432784&amp;c=networks'>Montpelier Action Group </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1432784-stars' onclick='stars_set("1432784-stars")' onmouseout='stars_mouseout("1432784-stars")' stars_set_value='3' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432784-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432784-stars",2)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432784-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432784-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432784-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active </i></div></td></tr></table></td></tr><tr class='ct_even'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1546331,25)")' style='color: #888;'><img src='/images/blank-icons/11.png' border='0' /></a>
+<span id='cmg25'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fwww.opengeodata.org' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1546331&amp;c=networks'>OpenGeoData </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1546331-stars' onclick='stars_set("1546331-stars")' onmouseout='stars_mouseout("1546331-stars")' stars_set_value='2' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1546331-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1546331-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1546331-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1546331-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1546331-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active </i></div></td></tr></table></td></tr><tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1432674,26)")' style='color: #888;'><img src='http://www.gravatar.com/blavatar/c2066555984010c20d1ac5d190f2b94a?s=96&amp;d=http://s.wordpress.com/i/buttonw-com.png' border='0' width='50' /></a>
+<span id='cmg26'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fstokescroft.wordpress.com' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1432674&amp;c=networks'>Peoples Republic of Stokes Croft </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1432674-stars' onclick='stars_set("1432674-stars")' onmouseout='stars_mouseout("1432674-stars")' stars_set_value='4' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432674-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432674-stars",2)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432674-stars",3)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432674-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432674-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 27 days ago</i></div></td></tr></table></td></tr><tr class='ct_even'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1432671,27)")' style='color: #888;'><img src='/images/blank-icons/3.png' border='0' /></a>
+<span id='cmg27'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fplanet.classpath.org%2F' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1432671&amp;c=networks'>Planet Classpath </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1432671-stars' onclick='stars_set("1432671-stars")' onmouseout='stars_mouseout("1432671-stars")' stars_set_value='1' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432671-stars",1)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432671-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432671-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432671-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432671-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 25 days ago</i></div></td></tr></table></td></tr><tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1432673,28)")' style='color: #888;'><img src='/images/blank-icons/5.png' border='0' /></a>
+<span id='cmg28'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fplanet.gnome.org%2F' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1432673&amp;c=networks'>Planet GNOME </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1432673-stars' onclick='stars_set("1432673-stars")' onmouseout='stars_mouseout("1432673-stars")' stars_set_value='1' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432673-stars",1)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432673-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432673-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432673-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432673-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 24 days ago</i></div></td></tr></table></td></tr><tr class='ct_even'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1432669,29)")' style='color: #888;'><img src='/images/blank-icons/1.png' border='0' /></a>
+<span id='cmg29'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fblogs.sun.com%2Fopenjdk%2Ffeed%2Fentries%2Fatom' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1432669&amp;c=networks'>Planet JDK </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1432669-stars' onclick='stars_set("1432669-stars")' onmouseout='stars_mouseout("1432669-stars")' stars_set_value='2' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432669-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432669-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432669-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432669-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432669-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active </i></div></td></tr></table></td></tr><tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1440712,30)")' style='color: #888;'><img src='/images/blank-icons/4.png' border='0' /></a>
+<span id='cmg30'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fplanetrdf.com%2F' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1440712&amp;c=networks'>Planet RDF </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1440712-stars' onclick='stars_set("1440712-stars")' onmouseout='stars_mouseout("1440712-stars")' stars_set_value='4' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1440712-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1440712-stars",2)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1440712-stars",3)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1440712-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1440712-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 25 days ago</i></div></td></tr></table></td></tr><tr class='ct_even'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1432667,31)")' style='color: #888;'><img src='/images/blank-icons/11.png' border='0' /></a>
+<span id='cmg31'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fplanet.xmlhack.com%2F' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1432667&amp;c=networks'>Planet XML </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1432667-stars' onclick='stars_set("1432667-stars")' onmouseout='stars_mouseout("1432667-stars")' stars_set_value='2' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432667-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432667-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432667-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432667-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432667-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 102 days ago</i></div></td></tr></table></td></tr><tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1589051,32)")' style='color: #888;'><img src='/images/blank-icons/11.png' border='0' /></a>
+<span id='cmg32'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fwww.opsi.gov.uk%2Funlocking-service%2F' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1589051&amp;c=networks'>Public Sector Information Unlocking Service </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1589051-stars' onclick='stars_set("1589051-stars")' onmouseout='stars_mouseout("1589051-stars")' stars_set_value='3' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1589051-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1589051-stars",2)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1589051-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1589051-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1589051-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active </i></div></td></tr></table></td></tr><tr class='ct_even'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1790496,33)")' style='color: #888;'><img src='/images/blank-icons/0.png' border='0' /></a>
+<span id='cmg33'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Ftwitter.com%2Fredlandpeople' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1790496&amp;c=networks'>redlandpeople </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1790496-stars' onclick='stars_set("1790496-stars")' onmouseout='stars_mouseout("1790496-stars")' stars_set_value='2' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1790496-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1790496-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1790496-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1790496-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1790496-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 25 days ago</i></div></td></tr></table></td></tr><tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1812140,34)")' style='color: #888;'><img src='/images/blank-icons/8.png' border='0' /></a>
+<span id='cmg34'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fwww.semanticoverflow.com%2Ffeeds' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1812140&amp;c=networks'>Semantic Overflow </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1812140-stars' onclick='stars_set("1812140-stars")' onmouseout='stars_mouseout("1812140-stars")' stars_set_value='1' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1812140-stars",1)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1812140-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1812140-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1812140-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1812140-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active </i></div></td></tr></table></td></tr><tr class='ct_even'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1432577,35)")' style='color: #888;'><img src='/images/blank-icons/5.png' border='0' /></a>
+<span id='cmg35'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><i>No Networks!</i></div><a href='view_friend.php?uf_id=1432577&amp;c=networks'>Shellac </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1432577-stars' onclick='stars_set("1432577-stars")' onmouseout='stars_mouseout("1432577-stars")' stars_set_value='1' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432577-stars",1)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432577-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432577-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432577-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432577-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'><img src='images/del2.png' style='cursor: pointer;' align='absmiddle' onclick='if (confirm("Delete this friend, are you sure?")) location.href="list_friends.php?c=delete_friend&amp;sure=yes&amp;uf_id=1432577";' />&nbsp;</td></tr>
+<tr><td><div class='fp_none' style='margin-top: 5px;'>Not recently active</div></td></tr></table></td></tr><tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1460351,36)")' style='color: #888;'><img src='/images/blank-icons/11.png' border='0' /></a>
+<span id='cmg36'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fwww.thewebsemantic.com' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1460351&amp;c=networks'>Taylor Cowan </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1460351-stars' onclick='stars_set("1460351-stars")' onmouseout='stars_mouseout("1460351-stars")' stars_set_value='5' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1460351-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1460351-stars",2)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1460351-stars",3)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1460351-stars",4)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1460351-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active </i></div></td></tr></table></td></tr><tr class='ct_even'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(2009827,37)")' style='color: #888;'><img src='/images/blank-icons/7.png' border='0' /></a>
+<span id='cmg37'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fjimjupp.blogspot.com%2F' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=2009827&amp;c=networks'>The Belbury Parish Magazine </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='2009827-stars' onclick='stars_set("2009827-stars")' onmouseout='stars_mouseout("2009827-stars")' stars_set_value='2' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("2009827-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("2009827-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("2009827-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("2009827-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("2009827-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 33 days ago</i></div></td></tr></table></td></tr><tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1433158,38)")' style='color: #888;'><img src='http://www.gravatar.com/blavatar/60cbdabcc2d097fa53182722a96da242?s=96&amp;d=http://s.wordpress.com/i/buttonw-com.png' border='0' width='50' /></a>
+<span id='cmg38'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fthebristolblogger.wordpress.com' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1433158&amp;c=networks'>The Bristol Blogger </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1433158-stars' onclick='stars_set("1433158-stars")' onmouseout='stars_mouseout("1433158-stars")' stars_set_value='3' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1433158-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1433158-stars",2)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1433158-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1433158-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1433158-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active </i></div></td></tr></table></td></tr><tr class='ct_even'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1788820,39)")' style='color: #888;'><img src='/images/blank-icons/4.png' border='0' /></a>
+<span id='cmg39'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Fblog.datagraph.org%2F' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1788820&amp;c=networks'>The Datagraph Blog </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1788820-stars' onclick='stars_set("1788820-stars")' onmouseout='stars_mouseout("1788820-stars")' stars_set_value='2' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1788820-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1788820-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1788820-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1788820-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1788820-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active </i></div></td></tr></table></td></tr><tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1516597,40)")' style='color: #888;'><img src='/images/blank-icons/1.png' border='0' /></a>
+<span id='cmg40'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Ftwitter.com%2Fbristolskeptics' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1516597&amp;c=networks'>Twitter / bristolskeptics </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1516597-stars' onclick='stars_set("1516597-stars")' onmouseout='stars_mouseout("1516597-stars")' stars_set_value='2' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1516597-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1516597-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1516597-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1516597-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1516597-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 26 days ago</i></div></td></tr></table></td></tr><tr class='ct_even'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(4043571,41)")' style='color: #888;'><img src='/images/blank-icons/3.png' border='0' /></a>
+<span id='cmg41'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Ftwitter.com%2Fbristolwebfolk' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=4043571&amp;c=networks'>Twitter / bristolwebfolk </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='4043571-stars' onclick='stars_set("4043571-stars")' onmouseout='stars_mouseout("4043571-stars")' stars_set_value='3' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("4043571-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("4043571-stars",2)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("4043571-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("4043571-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("4043571-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 25 days ago</i></div></td></tr></table></td></tr><tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1433167,42)")' style='color: #888;'><img src='/images/blank-icons/7.png' border='0' /></a>
+<span id='cmg42'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Ftwitter.com%2FCllrJonRogers' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1433167&amp;c=networks'>Twitter / CllrJonRogers </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1433167-stars' onclick='stars_set("1433167-stars")' onmouseout='stars_mouseout("1433167-stars")' stars_set_value='2' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1433167-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1433167-stars",2)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1433167-stars",3)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1433167-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1433167-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 25 days ago</i></div></td></tr></table></td></tr><tr class='ct_even'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1432668,43)")' style='color: #888;'><img src='/images/blank-icons/0.png' border='0' /></a>
+<span id='cmg43'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Ftwitter.com%2Fdanbri' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1432668&amp;c=networks'>Twitter / danbri </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1432668-stars' onclick='stars_set("1432668-stars")' onmouseout='stars_mouseout("1432668-stars")' stars_set_value='4' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432668-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432668-stars",2)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432668-stars",3)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432668-stars",4)' /><img src='images/fb-star-empty.gif' onmouseover='stars_highlight("1432668-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 24 days ago</i></div></td></tr></table></td></tr><tr class='ct_odd'><td style='border-bottom: 1px solid #ddd;'>
+<table border='0' cellpadding='0' cellspacing='0' style='width: 735px; table-layout: fixed;'><tr><td rowspan='2' style='width: 55px;'><a href='javascript:fl_do("cmenu(1432670,44)")' style='color: #888;'><img src='/images/blank-icons/2.png' border='0' /></a>
+<span id='cmg44'></span></td>
+<td style='width: 525px;' valign='bottom' >
+<div style='float: right;'><a href='/go.php?url=http%3A%2F%2Ftwitter.com%2Flibbymiller' class='ext' target='_blank'><img src='images/n_spk.png' style='position: absolute; margin-top: 20px;' border='0' /><img src='images/picon_rss.png' border='0' style='border: 1px solid #404040; margin-right: 1px;' title='rss' alt='rss' align='absmiddle' /></a></div><a href='view_friend.php?uf_id=1432670&amp;c=networks'>Twitter / libbymiller </a>
+</td>
+<td rowspan='2' align='center'><span class='stars' name='1432670-stars' onclick='stars_set("1432670-stars")' onmouseout='stars_mouseout("1432670-stars")' stars_set_value='5' ><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432670-stars",1)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432670-stars",2)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432670-stars",3)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432670-stars",4)' /><img src='images/fb-star-full.gif' onmouseover='stars_highlight("1432670-stars",5)' /></span></td>
+<td rowspan='2' style='width: 25px;'>&nbsp;</td></tr>
+<tr><td><div class='fp_note' style='margin-top: 5px;'><i>Active 25 days ago</i></div></td></tr></table></td></tr></table>
+<input type='hidden' name='p' value='1' />	
+	</div>
+</div>
+<div class='bottom_bit'>
+<div class='bottom_bit_inner'>
+<p>
+<a href='/contact_us.php'>Contact</a>
+ | <a href='/help/'>Help</a> | <a href='/networks.php?start=true'>Getting Started</a> | <a href='/glossary.php'>Glossary</a> | <a href='/press-info/'>Press Information</a> | <a href='http://blog.friendbinder.com/'>Blog</a> | <a target='_blank' href='http://getsatisfaction.com/friendbinder/'>Feedback &amp; Support</a></span> | <a href='http://m.friendbinder.com'>Mobile Site</a> | Also by us: <a target='_blank' href='http://cleverrun.com'>CleverRun</a></span></p>
+<p>Copyright 2007-<b></b>2012</p>
+
+</div></div>
+<!-- Start Quantcast tag -->
+<script type="text/javascript"> _qoptions={ qacct:"p-96MMcFIxxIScU" }; </script>
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<noscript>
+<img src="http://pixel.quantserve.com/pixel/p-96MMcFIxxIScU.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+</noscript>
+<!-- End Quantcast tag -->
+</body>
+</html>
