@@ -1,0 +1,25 @@
+<!doctype html>
+<% import net.rootdev.aggie.FeedItem %>
+<%@ var groupedRecent:Iterable[(String,Iterable[(String,Iterable[FeedItem])])] %>
+<html>
+    <head>
+        <title>Latest posts</title>
+        <style>
+            .date { background-color: darkred; color: white; font-family: helvetica;  font-size: 130%; padding: 0.5em }
+            .feed { background-color: #9932cc; color: white; font-family: helvetica; padding: 0.5em }
+            .item { background-color: white; font-family: serif; }
+            .time { min-width: 7em; }
+        </style>
+    </head>
+    <body>
+        #for (byDate <- groupedRecent)
+        <div class="date">${byDate._1}</div>
+        #for (byFeed <- byDate._2)
+        <div class="feed">${byFeed._1}</div>
+        #for (item <- byFeed._2)
+        <div class="item"><span class="time">${time(item.date)}</span>: ${item.title} <a href="${item.link}">-&gt;</a></div>
+        #end
+        #end
+        #end
+    </body>
+</html>
