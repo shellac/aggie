@@ -17,7 +17,7 @@ import java.text.{DateFormatSymbols, SimpleDateFormat}
 object App extends App {
 
 
-  implicit def traversableToGroupByOrderedImplicit[A](t: Traversable[A]): GroupByOrderedImplicit[A] =
+  implicit def traversableToGroupByOrderedImplicit[A](t: Iterable[A]): GroupByOrderedImplicit[A] =
     new GroupByOrderedImplicit[A](t)
 
   println( "Hello World!" )
@@ -41,15 +41,7 @@ object App extends App {
   // Phew! Group list to map Date -> Feed -> item
   val groupedRecent = store.listRecent
     .groupByOrdered(f => toDate.format(f.date.getTime))
-    .mapValues(_.groupByOrdered(_.feed))
-
-  groupedRecent.foreach { byDate =>
-    printf("%s\n", byDate._1)
-    byDate._2.foreach { byFeed =>
-      printf("\t\t%s\n", byFeed._1)
-      byFeed._2.foreach(f => printf("      %s: %s\n", f.date.getTimeInMillis, "..."))
-    }
-  }
+    .map { case(k,v) => (k, v.groupByOrdered(g => g.feed)) }
 
   val engine = new TemplateEngine
   engine.bindings = List(Binding("helper", "net.rootdev.aggie.Helper", true))
@@ -58,6 +50,8 @@ object App extends App {
   val out = new PrintWriter(new File("foo.html"), "utf-8")
   out.println(output)
   out.close()
+
+  println("Finished!")
 }
 
 case class FeedItem(title: String, link: String, date: Calendar, feed: String)
@@ -98,7 +92,7 @@ class Store(dir: String) {
     graph ?g1 {
       ?g dc:title ?feedlabel
     }
-  } order by DESC(?created) limit 80
+  } order by DESC(?created) limit 200
 
   """)
 
@@ -164,7 +158,7 @@ class Store(dir: String) {
     }
   }
 
-  def listRecent: List[FeedItem] = {
+  def listRecent: Iterable[FeedItem] = {
     val qe = QueryExecutionFactory.create(listRecentQuery, getDataset)
     try {
       val results = qe.execSelect()

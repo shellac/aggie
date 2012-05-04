@@ -1,5 +1,8 @@
 package net.rootdev.aggie
 
+import scala.None
+import collection.mutable.{ListBuffer, LinkedList, LinkedHashMap, LinkedHashSet}
+
 /**
  * Created with IntelliJ IDEA.
  * User: pldms
@@ -10,16 +13,21 @@ package net.rootdev.aggie
 
 /* Taken from http://stackoverflow.com/questions/9594431/scala-groupby-preserving-insertion-order */
 
-import collection.mutable.{LinkedHashMap, LinkedHashSet}
 
-class GroupByOrderedImplicit[A](t: Traversable[A]) {
-  def groupByOrdered[K](f: A => K): LinkedHashMap[K, LinkedHashSet[A]] = {
-    val map = LinkedHashMap[K,LinkedHashSet[A]]()
-    for (i <- t) {
-      val key = f(i)
-      map(key) = map.lift(key).getOrElse(LinkedHashSet[A]()) + i
+class GroupByOrderedImplicit[A](t: Iterable[A]) {
+  def groupByOrdered[K](f: A => K): List[(K, Iterable[A])] = {
+    val map = ListBuffer[(K, Iterable[A])]()
+    var currentKey = f(t.head) // get value for first item
+    var lastIndex = 0
+    t.zipWithIndex.foreach { case(element, i) =>
+      val key = f(element)
+      if (key != currentKey) {
+        map.append( (currentKey, t.slice(lastIndex, i)) )
+        lastIndex = i
+        currentKey = key
+      }
     }
-    map
+    map.toList
   }
 }
 
