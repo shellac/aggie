@@ -28,13 +28,13 @@ object App extends App {
   val fetcher = new AggieFetcher( new DiskFeedInfoCache("rome.http.cache"),
     store.listSources )
 
-  //fetcher.fetch { (entry, source) =>
-  //  store.record( entry, source )
-  //}
-
-  store.listRecent.foreach { feeditem =>
-    printf("%s\t%s\t%s: ...\n", feeditem.date.get(Calendar.MONTH), feeditem.date.get(Calendar.DAY_OF_MONTH), feeditem.date.getTimeInMillis)
+  fetcher.fetch { (entry, source) =>
+    store.record( entry, source )
   }
+
+  //store.listRecent.foreach { feeditem =>
+  //  printf("%s\t%s\t%s: ...\n", feeditem.date.get(Calendar.MONTH), feeditem.date.get(Calendar.DAY_OF_MONTH), feeditem.date.getTimeInMillis)
+  //}
 
   val toDate = new SimpleDateFormat("EEE, dd MMMMM")
 
@@ -44,6 +44,9 @@ object App extends App {
     .map { case(k,v) => (k, v.groupByOrdered(g => g.feed)) }
 
   val engine = new TemplateEngine
+  engine.workingDirectory = new File("scalate-working")
+  engine.allowCaching = true
+  engine.allowReload = false
   engine.bindings = List(Binding("helper", "net.rootdev.aggie.Helper", true))
   val output = engine.layout("tmpl.ssp", Map("groupedRecent" -> groupedRecent, "helper" -> new Helper))
 
