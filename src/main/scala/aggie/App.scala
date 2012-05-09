@@ -13,17 +13,35 @@ import com.hp.hpl.jena.datatypes.xsd.XSDDateTime
 import org.fusesource.scalate._
 import java.io.{File, PrintWriter, OutputStreamWriter}
 import java.text.{DateFormatSymbols, SimpleDateFormat}
+import scopt.mutable.OptionParser
 
 object App extends App {
 
+  var fetch = true
+  var outputFile = "out.html"
+  var feedConfig: Option[String] = None
+
+  val parser = new OptionParser("scopt", "2.x") {
+    booleanOpt("fetch", "fetch new posts", {v: Boolean => fetch = v})
+    opt("c", "feedconfig", "Read feed config from <feedconfig>", {v: String => feedConfig = Some(v)})
+    opt("o", "output", "Write output to <output>", {v: String => outputFile = v})
+  }
+
+  if (!parser.parse(args)) {
+    sys.exit(255)
+  }
 
   implicit def traversableToGroupByOrderedImplicit[A](t: Iterable[A]): GroupByOrderedImplicit[A] =
     new GroupByOrderedImplicit[A](t)
 
-  println( "Hello World!" )
+  println( "Starting..." )
 
   val store = new Store( "rome.results.tdb" )
-  store.load("feeds.ttl")
+
+  if (feedConfig != None) {
+    printf("Loading feed config <%s>\n", feedConfig.get)
+    store.load(feedConfig.get)
+  }
 
   val fetcher = new AggieFetcher( new DiskFeedInfoCache("rome.http.cache"),
     store.listSources )
@@ -31,10 +49,6 @@ object App extends App {
   fetcher.fetch { (entry, source) =>
     store.record( entry, source )
   }
-
-  //store.listRecent.foreach { feeditem =>
-  //  printf("%s\t%s\t%s: ...\n", feeditem.date.get(Calendar.MONTH), feeditem.date.get(Calendar.DAY_OF_MONTH), feeditem.date.getTimeInMillis)
-  //}
 
   val toDate = new SimpleDateFormat("EEE, dd MMMMM")
 
@@ -50,7 +64,7 @@ object App extends App {
   engine.bindings = List(Binding("helper", "net.rootdev.aggie.Helper", true))
   val output = engine.layout("tmpl.ssp", Map("groupedRecent" -> groupedRecent, "helper" -> new Helper))
 
-  val out = new PrintWriter(new File("foo.html"), "utf-8")
+  val out = new PrintWriter(new File(outputFile), "utf-8")
   out.println(output)
   out.close()
 
@@ -139,7 +153,7 @@ class Store(dir: String) {
       val m = ds.getNamedModel(source.toString)
       val thing = m.createResource(entry.getUri)
       thing.removeProperties()
-      thing.addLiteral(DCTerms.created, asCalendar(entry.getPublishedDate))
+      if (entry.getPublishedDate != null) thing.addLiteral(DCTerms.created, asCalendar(entry.getPublishedDate))
       if (entry.getUpdatedDate != null) thing.addLiteral(DCTerms.modified, asCalendar(entry.getUpdatedDate))
       thing.addProperty(DCTerms.title, entry.getTitle)
       thing.addProperty(DCTerms.references, m.createResource(entry.getLink))

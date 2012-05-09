@@ -176,3 +176,6 @@
 <http://twitter.com/statuses/user_timeline/6705042.rss>
   dc:type "application/rss+xml" ;
   dc:title "ben goldacre (@bengoldacre) on Twitter" .
+<http://planetjdk.org/feed.atom-1.0>
+  dc:type "application/atom+xml" ;
+  dc:title "Planet JDK" .
