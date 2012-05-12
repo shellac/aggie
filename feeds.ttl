@@ -179,3 +179,22 @@
 <http://planetjdk.org/feed.atom-1.0>
   dc:type "application/atom+xml" ;
   dc:title "Planet JDK" .
+<http://twitter.com/statuses/user_timeline/9989362.rss>
+  dc:type "application/rss+xml" ;
+  dc:title "Headius (@headius) on Twitter" .
+<http://planetrdf.com/index.rdf>
+  dc:type "application/rdf+xml" ;
+  dc:title "Planet RDF" .
+<http://answers.semanticweb.com/feeds/rss>
+  dc:type "application/rss+xml" ;
+  dc:title "Semantic Overflow" .
+<http://stackoverflow.com/feeds/tag?tagnames=rdf&sort=newest>
+  dc:type "application/atom+xml" ;
+  dc:title "Stack Overflow: rdf" .
+<http://stackoverflow.com/feeds/tag?tagnames=jena&sort=newest>
+  dc:type "application/atom+xml" ;
+  dc:title "Stack Overflow: jena" .
+<http://stackoverflow.com/feeds/tag?tagnames=sparql&sort=newest>
+  dc:type "application/atom+xml" ;
+  dc:title "Stack Overflow: sparql" .
+
