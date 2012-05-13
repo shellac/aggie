@@ -18,11 +18,13 @@ import scopt.mutable.OptionParser
 object App extends App {
 
   var fetch = true
+  var devel = false
   var outputFile = "out.html"
   var feedConfig: Option[String] = None
 
-  val parser = new OptionParser("scopt", "2.x") {
+  val parser = new OptionParser("aggie", "0.1") {
     booleanOpt("fetch", "fetch new posts", {v: Boolean => fetch = v})
+    booleanOpt("devel", "developer mode (no template caching, no fetch)", {v: Boolean => devel = v; fetch = false})
     opt("c", "feedconfig", "Read feed config from <feedconfig>", {v: String => feedConfig = Some(v)})
     opt("o", "output", "Write output to <output>", {v: String => outputFile = v})
   }
@@ -43,11 +45,14 @@ object App extends App {
     store.load(feedConfig.get)
   }
 
-  val fetcher = new AggieFetcher( new DiskFeedInfoCache("rome.http.cache"),
-    store.listSources )
+  if (fetch) {
+    println("Fetching feeds")
+    val fetcher = new AggieFetcher( new DiskFeedInfoCache("rome.http.cache"),
+      store.listSources )
 
-  fetcher.fetch { (entry, source) =>
-    store.record( entry, source )
+    fetcher.fetch { (entry, source) =>
+      store.record( entry, source )
+    }
   }
 
   val toDate = new SimpleDateFormat("EEE, dd MMMMM")
@@ -60,7 +65,7 @@ object App extends App {
   val engine = new TemplateEngine
   engine.workingDirectory = new File("scalate-working")
   engine.allowCaching = true
-  engine.allowReload = false
+  engine.allowReload = devel // will reload each time, it seems?
   engine.bindings = List(Binding("helper", "net.rootdev.aggie.Helper", true))
   val output = engine.layout("tmpl.ssp", Map("groupedRecent" -> groupedRecent, "helper" -> new Helper))
 
