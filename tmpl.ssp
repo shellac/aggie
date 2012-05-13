@@ -4,22 +4,34 @@
 <html>
     <head>
         <title>Latest posts</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
         <style>
             .date { background-color: darkred; color: white; font-family: helvetica;  font-size: 130%; padding: 0.5em }
             .feed { background-color: #9932cc; color: white; font-family: helvetica; padding: 0.5em }
-            .item { background-color: white; font-family: serif; }
+            .item { background-color: white; }
             .time { min-width: 7em; }
         </style>
     </head>
     <body>
+		<div class="container">
         #for (byDate <- groupedRecent)
-        <div class="date">${byDate._1}</div>
+		<div class="row">
+        <div class="span12 well"><h2>${byDate._1}</h2></div>
+		</div>
         #for (byFeed <- byDate._2)
-        <div class="feed">${byFeed._1}</div>
+		<div class="row">
+        <div class="span2 well">${byFeed._1}</div>
+		<div class="span9">
         #for (item <- byFeed._2)
-        <div class="item"><span class="time">${time(item.date)}</span>: ${item.title} <a href="${item.link}">-&gt;</a></div>
+        <div class="item">
+			<a href="${item.link}" class="time btn btn-mini">${time(item.date)}</a>
+			${item.title}
+		</div>
+        #end
+		</div> <!-- span9 -->
+		</div> <!-- row -->
         #end
         #end
-        #end
+		</div> <!-- container -->
     </body>
 </html>
