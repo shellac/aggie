@@ -8,9 +8,6 @@
 <http://www.bbc.co.uk/blogs/adamandjoe/atom.xml>
   dc:type "application/atom+xml" ;
   dc:title "BBC - Adam and Joe" .
-#<http://www.bbc.co.uk/blogs/adamandjoe/rss.xml>
-#  dc:type "application/rss+xml" ;
-#  dc:title "BBC - Adam and Joe" .
 <http://twitter.com/statuses/user_timeline/143005824.rss>
   dc:type "application/rss+xml" ;
   dc:title "Adam's Big Mix Tape (@AdamsBigMixTape) on Twitter" .
@@ -86,9 +83,9 @@
 #<http://bristol.indymedia.org/2.0/rss/newswire>
 #  dc:type "application/rss+xml" ;
 #  dc:title "Features - Bristol Indymedia" .
-<http://bristol.indymedia.org/atom.xml>
-  dc:type "application/atom+xml" ;
-  dc:title "Features - Bristol Indymedia" .
+#<http://bristol.indymedia.org/atom.xml>
+#  dc:type "application/atom+xml" ;
+#  dc:title "Features - Bristol Indymedia" .
 #<http://bristol.indymedia.org/podcast.xml>
 #  dc:type "application/rss+xml" ;
 #  dc:title "Features - Bristol Indymedia" .
@@ -131,9 +128,6 @@
 #<http://planet.gnome.org/rss20.xml>
 #  dc:type "application/rss+xml" ;
 #  dc:title "Planet GNOME" .
-<https://my-profile.eu/index.rdf>
-  dc:type "application/rss+xml" ;
-  dc:title "Planet RDF" .
 <http://twitter.com/statuses/user_timeline/50640872.rss>
   dc:type "application/rss+xml" ;
   dc:title "Redland People (@redlandpeople) on Twitter" .
@@ -152,9 +146,6 @@
 <http://twitter.com/statuses/user_timeline/467300991.rss>
   dc:type "application/rss+xml" ;
   dc:title "Bristol Web Folk (@bristolwebfolk) on Twitter" .
-#<http://twitter.com/favorites/467300991.rss>
-#  dc:type "application/rss+xml" ;
-#  dc:title "Bristol Web Folk (@bristolwebfolk) on Twitter" .
 <http://twitter.com/statuses/user_timeline/21294997.rss>
   dc:type "application/rss+xml" ;
   dc:title "Jon Rogers (@CllrJonRogers) on Twitter" .
