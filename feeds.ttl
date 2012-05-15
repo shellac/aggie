@@ -176,7 +176,7 @@
 <http://planetrdf.com/index.rdf>
   dc:type "application/rdf+xml" ;
   dc:title "Planet RDF" .
-<http://answers.semanticweb.com/feeds/rss>
+<http://answers.semanticweb.com/questions/?type=rss>
   dc:type "application/rss+xml" ;
   dc:title "Semantic Overflow" .
 <http://stackoverflow.com/feeds/tag?tagnames=rdf&sort=newest>
