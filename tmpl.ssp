@@ -2,9 +2,11 @@
 <% import net.rootdev.aggie.FeedItem %>
 <%@ var groupedRecent:Iterable[(String,Iterable[(String,Iterable[FeedItem])])] %>
 <html>
-    <head>
+  <head>
+        <meta charset='utf-8'>
         <title>Latest posts</title>
-		<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <meta http-equiv="refresh" content="300">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
         <style>
             .date { }
             .feed { }
@@ -38,4 +40,5 @@
         #end
 		</div> <!-- container -->
     </body>
-</html>
+  </html>
+
