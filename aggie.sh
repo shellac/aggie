@@ -16,7 +16,8 @@ fi
 
 export CLASSPATH=$AGGIE_HOME/target/*:$AGGIE_HOME/target/dependency/*
 
-exec java net.rootdev.aggie.App -o aggie/index.html $@
+exec java net.rootdev.aggie.App -o index.html $@
+echo "Result is index.html"
 
 # Unused
 
