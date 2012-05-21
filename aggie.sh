@@ -14,8 +14,6 @@ if [ ! -e $AGGIE_HOME/target/dependency ]
 	mvn dependency:copy-dependencies
 fi
 
-exit 1
-
 export CLASSPATH=$AGGIE_HOME/target/*:$AGGIE_HOME/target/dependency/*
 
 (
