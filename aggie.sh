@@ -4,17 +4,21 @@ AGGIE_HOME=$(dirname $0)
 
 if [ ! -e $AGGIE_HOME/target/aggie*jar ]
 	then
-	echo "Need to compile aggie. This may take a while."
+	echo "Need to compile aggie. This may take a while..."
 	mvn install
 fi
 
 if [ ! -e $AGGIE_HOME/target/dependency ]
 	then
-	echo "Installing dependecies."
+	echo "Installing dependencies..."
 	mvn dependency:copy-dependencies
 fi
 
 export CLASSPATH=$AGGIE_HOME/target/*:$AGGIE_HOME/target/dependency/*
+
+exec java net.rootdev.aggie.App -o aggie/index.html $@
+
+# Unused
 
 (
   if flock -n 89
