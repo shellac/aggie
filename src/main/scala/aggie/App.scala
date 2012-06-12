@@ -135,7 +135,7 @@ class Store(dir: String) {
     val ds = getDataset
     ds.begin(ReadWrite.WRITE)
     try {
-      ds.getNamedModel("loaded:" + source).add(data)
+      ds.getNamedModel("loaded:" + source).removeAll().add(data)
       ds.commit()
     } finally {
       ds.end()
