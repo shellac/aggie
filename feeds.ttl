@@ -191,3 +191,6 @@
 <http://bristolcars.blogspot.com/feeds/posts/default>
   dc:type "application/atom+xml" ;
   dc:title "Bristol Traffic" .
+<http://api.flickr.com/services/feeds/photos_friends.gne?user_id=36686400@N00&amp;friends=0&amp;display_all=1&amp;lang=en-us&amp;format=atom>
+  dc:type "application/atom+xml" ;
+  dc:title "Flickr friends feed" .

@@ -31,6 +31,9 @@
 			</div>
 			<div class="span8 item">
 			${item.title}
+            #if (item.image != null)
+                <img src="${item.image}">
+            #end
 			</div>
 			</div>
         #end

@@ -4,16 +4,18 @@ import scala.collection.JavaConversions._
 import org.rometools.fetcher.impl.{ HttpClientFeedFetcher, DiskFeedInfoCache, FeedFetcherCache }
 import java.net.URL
 import java.util.{ Date, Calendar }
-import com.sun.syndication.feed.synd.SyndEntry
+import com.sun.syndication.feed.synd.{SyndEnclosure, SyndEntry}
 import com.hp.hpl.jena.tdb.TDBFactory
 import com.hp.hpl.jena.vocabulary.DCTerms
-import com.hp.hpl.jena.query.{QueryExecutionFactory, QueryFactory, ReadWrite}
+import com.hp.hpl.jena.query._
 import com.hp.hpl.jena.util.FileManager
 import com.hp.hpl.jena.datatypes.xsd.XSDDateTime
 import org.fusesource.scalate._
 import java.io.{File, PrintWriter, OutputStreamWriter}
 import java.text.{DateFormatSymbols, SimpleDateFormat}
 import scopt.mutable.OptionParser
+import scala.Some
+import com.hp.hpl.jena.sparql.vocabulary.FOAF
 
 object App extends App {
 
@@ -76,7 +78,7 @@ object App extends App {
   println("Finished!")
 }
 
-case class FeedItem(title: String, link: String, date: Calendar, feed: String)
+case class FeedItem(title: String, link: String, date: Calendar, feed: String, image: String)
 
 class Helper {
   val toTime = new SimpleDateFormat("H:mm")
@@ -103,20 +105,23 @@ class AggieFetcher(feedCache: FeedFetcherCache, thesources: List[String]) {
 
 class Store(dir: String) {
   val storeDir = dir
+  val ds = TDBFactory.createDataset(dir)
   val listRecentQuery = QueryFactory.create("""
 
   prefix dc: <http://purl.org/dc/terms/>
+  prefix foaf: <http://xmlns.com/foaf/0.1/>
 
-  select ?created ?title ?link ?feedlabel {
+  select ?created ?title ?link ?feedlabel ?image {
     graph ?g {
-      ?item dc:title ?title ; dc:references ?link ; dc:created ?created
+      ?item dc:title ?title ; dc:references ?link ; dc:created ?created .
+      OPTIONAL { ?item foaf:depiction ?image }
     }
     graph ?g1 {
       ?g dc:title ?feedlabel
     }
   } order by DESC(?created) limit 200
 
-  """)
+                                            """)
 
   val listSourcesQuery = QueryFactory.create("""
 
@@ -132,7 +137,6 @@ class Store(dir: String) {
 
   def load(source: String) {
     val data = FileManager.get().loadModel(source)
-    val ds = getDataset
     ds.begin(ReadWrite.WRITE)
     try {
       ds.getNamedModel("loaded:" + source).removeAll().add(data)
@@ -142,8 +146,6 @@ class Store(dir: String) {
     }
   }
 
-  def getDataset = TDBFactory.createDataset(dir)
-
   def asCalendar(date: Date): Calendar = {
     val cal = Calendar.getInstance()
     cal.setTime(date)
@@ -151,8 +153,6 @@ class Store(dir: String) {
   }
 
   def record(entry: SyndEntry, source: URL) {
-    val ds = getDataset
-
     try {
       ds.begin(ReadWrite.WRITE)
       val m = ds.getNamedModel(source.toString)
@@ -162,6 +162,13 @@ class Store(dir: String) {
       if (entry.getUpdatedDate != null) thing.addLiteral(DCTerms.modified, asCalendar(entry.getUpdatedDate))
       thing.addProperty(DCTerms.title, entry.getTitle)
       thing.addProperty(DCTerms.references, m.createResource(entry.getLink))
+
+      entry.getEnclosures.foreach { enc =>
+        val e = enc.asInstanceOf[SyndEnclosure]
+        if (e.getType.startsWith("image/")) {
+          thing.addProperty(FOAF.depiction, m.createResource(e.getUrl))
+        }
+      }
       ds.commit()
     } finally {
       ds.end()
@@ -170,31 +177,39 @@ class Store(dir: String) {
   }
 
   def listSources: List[String] = {
-    val qe = QueryExecutionFactory.create(listSourcesQuery, getDataset)
+    var qe:QueryExecution = null
     try {
+      ds.begin(ReadWrite.READ)
+      qe = QueryExecutionFactory.create(listSourcesQuery, ds)
       val results = qe.execSelect()
       results.map( r => r.getResource("?source").getURI ).toList
     }
     finally {
-      qe.close()
+      if (qe != null) qe.close()
+      ds.end()
     }
   }
 
   def listRecent: Iterable[FeedItem] = {
-    val qe = QueryExecutionFactory.create(listRecentQuery, getDataset)
+    var qe:QueryExecution = null
     try {
+      ds.begin(ReadWrite.READ)
+      qe = QueryExecutionFactory.create(listRecentQuery, ds)
       val results = qe.execSelect()
       results.map { result =>
+        val imgURL = if (result.contains("?image")) result.getResource("?image").getURI else null;
         FeedItem(
-          result.get("?title").asLiteral().getString,
-          result.get("?link").asResource().getURI,
-          result.get("?created").asLiteral().getValue.asInstanceOf[XSDDateTime].asCalendar(),
-          result.get("?feedlabel").asLiteral().getString
+          result.getLiteral("?title").getString,
+          result.getResource("?link").getURI,
+          result.getLiteral("?created").getValue.asInstanceOf[XSDDateTime].asCalendar(),
+          result.getLiteral("?feedlabel").getString,
+          imgURL
         )
       }.toList
     }
     finally {
-      qe.close()
+      if (qe != null) qe.close()
+      ds.end()
     }
   }
 }
