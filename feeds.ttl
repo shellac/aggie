@@ -194,3 +194,6 @@
 <http://api.flickr.com/services/feeds/photos_friends.gne?user_id=36686400@N00&amp;friends=0&amp;display_all=1&amp;lang=en-us&amp;format=atom>
   dc:type "application/atom+xml" ;
   dc:title "Flickr friends feed" .
+<http://zverik.osm.rambler.ru/whodidit/scripts/rss.php?bbox=-2.615088,51.449285,-2.568396,51.484147>
+  dc:type "application/rss+xml" ;
+  dc:title "WhoDidIt for Bristol" .
