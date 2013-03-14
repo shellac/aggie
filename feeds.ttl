@@ -197,3 +197,7 @@
 <http://zverik.osm.rambler.ru/whodidit/scripts/rss.php?bbox=-2.615088,51.449285,-2.568396,51.484147>
   dc:type "application/rss+xml" ;
   dc:title "WhoDidIt for Bristol" .
+<http://scarfolk.blogspot.com/feeds/posts/default>
+  dc:type "application/atom+xml" ;
+  dc:title "Scarfolk Council" .
+
