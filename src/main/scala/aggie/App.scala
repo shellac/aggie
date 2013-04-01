@@ -87,6 +87,8 @@ class Helper {
 
 class AggieFetcher(feedCache: FeedFetcherCache, thesources: List[String]) {
   val fetcher = new HttpClientFeedFetcher(feedCache)
+  fetcher.setConnectTimeout(10000) // 10s
+  fetcher.setReadTimeout(10000) // 10s
   val sources = thesources.map(url => new URL(url))
 
   def fetch(handler: (SyndEntry, URL) => Unit ) {
